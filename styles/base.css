@@ -1,0 +1,139 @@
+p {
+  font-size: 4vw;
+  padding-top: 3vw;
+  padding-left: 2vw;
+}
+
+header {
+  background: #777;
+  height: 10vw;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: helvetica;
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+}
+/*
+header {
+  height: 80px;
+  background: #777;
+}*/
+
+/*header div {
+  width: 100%;
+  margin: 0 auto;
+  outline: dotted 3px green;
+}*/
+
+header div h1 {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+/*header div img {
+  float: left;
+  margin-right: 50px;
+  margin-top: 15px;
+}*/
+
+nav ul li {
+  display: inline-block;
+  margin-right: 70px;
+  margin-top: 45px;
+}
+
+main {
+  width: 100%;
+  margin: 30px auto;
+  outline: dotted 3px orange;
+}
+
+.sub-banners {
+  margin-top: 30px;
+}
+
+.sub-banners li {
+  float: left;
+  margin-right: 30px;
+}
+
+.sub-banners li:nth-child(3) {
+  margin-right: 0;
+}
+
+.featured-content img {
+  float: left;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.featured-content {
+  float: left;
+  margin-top: 30px;
+}
+.featured-content h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.featured-content p {
+  line-height: 26px;
+  outline: dotted 3px orange;
+  height: 300px;
+  overflow: auto;
+}
+
+.featured-content button {
+  border: none;
+  padding: 8px 18px;
+  background: #000;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+  height: 150px;
+  background: #222;
+}
+
+hr {
+  margin: 1em;
+  width: 100%;
+}
+
+/*TEXT STYLES
+=======================================*/
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover, a:focus {
+  color: #29506D;
+}
+
+a:visited {
+}
