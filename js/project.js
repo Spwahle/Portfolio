@@ -20,11 +20,12 @@ Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
 
   $newProject.removeClass('template');
+  //
+  //$newProject.find('.project-title-overlay h2').html(this.projectName);
+  //$newProject.find('.project-description').html(this.description);
+  $newProject.find('.link a').attr('href', this.siteUrl);
+  $newProject.find('.repo a').attr('href', this.repoUrl);
 
-  $newProject.find('.project-title-overlay h2').html(this.projectName);
-  $newProject.find('.project-description').html(this.description);
-  $newProject.find('.project-URL').attr('href', this.siteUrl);
-  $newProject.find('.project-repo').attr('href', this.repoUrl);
 
   return $newProject;
 };
