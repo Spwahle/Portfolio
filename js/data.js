@@ -1,8 +1,8 @@
 'use strict';
-
+//adding raw data onjects
 var rawData = [
   {
-    projectName: 'States Game',
+    projectName: 'Sweat It Out',
     description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     siteUrl: 'www.google.com',
     repoUrl: 'www.bing.com'
