@@ -22,6 +22,9 @@ Project.prototype.toHtml = function() {
   $newProject.removeClass('template');
 
   $newProject.find('.project-title-overlay h2').html(this.projectName);
+  $newProject.find('.project-description').html(this.description);
+  $newProject.find('.project-URL').attr('href', this.siteUrl);
+  $newProject.find('.project-repo').attr('href', this.repoUrl);
 
   return $newProject;
 };
