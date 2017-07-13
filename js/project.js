@@ -18,7 +18,6 @@ Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
 
   $newProject.removeClass('template');
-
   $newProject.find('.project-title-overlay h2').html(this.projectName);
   $newProject.find('.project-description').html(this.description);
   $newProject.find('.link a').attr('href', this.siteUrl);
