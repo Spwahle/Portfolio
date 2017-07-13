@@ -21,12 +21,14 @@
       <span class="icon-menu"></span>
     </section>
 
-    <nav>
+    <nav class="main-nav">
       <ul>
-        <li class="tab" data-content= "home"><a href="">Home</a></li>
-        <li <class="tab" data-content= "projects"><a href="#">Projects</a></li>
+        <li class="tab" data-content="home"><a href="">Home</a></li>
+        <a href="#">
+          <li class="tab" data-content="projects">Projects</li>
+        </a>
         <li><a href="https://github.com/spwahle">Github</a></li>
-        <li class="tab" data-content="about=me"><a href="#">About</a></li>
+        <a href="#" <li class="tab" data-content="about=me">About</li></a>
       </ul>
     </nav>
   </header>
@@ -40,22 +42,17 @@
       </section>
     </section>
 
-    <h2>Projects</h2>
+    <h2 class="tab-content projects">Projects</h2>
     <section id="projects">
-      <article class="template">
+      <article class="template tab-content projects">
         <div class="project-container">
           <div class="project-title-overlay">
             <h2>Project Name</h2>
-            <div class="project-description">
-              <div class="link">
-              <a href="">Link to project</a><br>
-              <div class="repo">
-                <a href="">Link to Repo</a><br>
-                <button>Learn More</button>
-                </<div>
-              </div>
-            </div>
+            <button>Learn More</button>
+            </<div>
           </div>
+        </div>
+        </div>
       </article>
     </section>
 
