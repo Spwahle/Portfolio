@@ -36,25 +36,3 @@ rawData.forEach(function(projectObject) {
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
 });
-
-var projectView = {};
-
-projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
-    $('.hero-container').hide();
-    $('.tab-content').hide();
-    $('.' + $(this).data('content')).show();
-    $('.template').hide();
-  });
-};
-
-function hamburgerClick() {
-  $('.icon-menu').on('click', function() {
-    $('nav').toggleClass('toggle');
-  });
-}
-
-$(document).ready(function() {
-  hamburgerClick();
-  projectView.handleMainNav();
-});
