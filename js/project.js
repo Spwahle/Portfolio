@@ -1,8 +1,6 @@
 'use strict';
 //Reworked hamburger button for a click function. Toggle will set display to block and none
-$('.icon-menu').on('click', function() {
-  $('nav').toggle();
-});
+
 //declaring global variable
 var projects = [];
 
@@ -20,9 +18,9 @@ Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
 
   $newProject.removeClass('template');
-  //
-  //$newProject.find('.project-title-overlay h2').html(this.projectName);
-  //$newProject.find('.project-description').html(this.description);
+
+  $newProject.find('.project-title-overlay h2').html(this.projectName);
+  $newProject.find('.project-description').html(this.description);
   $newProject.find('.link a').attr('href', this.siteUrl);
   $newProject.find('.repo a').attr('href', this.repoUrl);
 
@@ -37,4 +35,26 @@ rawData.forEach(function(projectObject) {
 //finall this will append each object to my id projects in html format
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
+});
+
+var projectView = {};
+
+projectView.handleMainNav = function() {
+  $('.main-nav').on('click', '.tab', function() {
+    $('.hero-container').hide();
+    $('.tab-content').hide();
+    $('.' + $(this).data('content')).show();
+    $('.template').hide();
+  });
+};
+
+function hamburgerClick() {
+  $('.icon-menu').on('click', function() {
+    $('nav').toggleClass('toggle');
+  });
+}
+
+$(document).ready(function() {
+  hamburgerClick();
+  projectView.handleMainNav();
 });

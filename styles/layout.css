@@ -9,6 +9,19 @@ main {
 .template {
   display: none;
 }
+
+nav li {
+  display: inline-block;
+}
+
+nav ul {
+  display: inline;
+  float: right;
+}
+
+.toggle {
+  display: block;
+}
 /*************************
           Carousel
 **************************/
