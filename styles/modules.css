@@ -2,7 +2,6 @@
   background: #777;
 }
 
-/* REVIEW: Float the main header to the left, to make room for the hamburger menu. */
 .heading-group-h1 {
   float: left;
   padding: 0 0 .2em 1em;
@@ -10,7 +9,8 @@
 
 .icon-menu {
   float: right;
-  font-size: 2em;
+  font-size: 8em;
+  color: black;
 }
 
 .main-nav {
@@ -22,6 +22,7 @@
   padding: 0;
   list-style: none;
   clear: both;
+
 }
 
 .main-nav:hover ul {
@@ -29,10 +30,12 @@
 }
 
 .main-nav li {
-  margin-right: .4em;
+  margin-right: 70px;
+  margin-top: 50px;
+  background: #777;
   font-size: 1.5em;
   padding: .5em .2em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 4px solid #ccc;
 }
 
 .main-banner {
@@ -55,4 +58,31 @@
 .byline a {
   font-weight: bold;
   text-decoration: none;
+}
+
+div .class {
+  margin-bottom: 50px;
+}
+
+.menu ul {
+  background: #777;
+}
+
+
+@media only screen and (min-width: 640px) {
+  .main-nav ul {
+    float: right;
+    padding-right: 10px;
+    display: block;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    border: none;
+    font-size: 1.25em;
+  }
+
+  .main-nav span.icon-menu {
+    display: none;
+  }
 }
