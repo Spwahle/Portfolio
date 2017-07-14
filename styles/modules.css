@@ -67,6 +67,7 @@ article .project-container {
   float: left;
   margin: 0 .5em;
   position: relative;
+  margin-left: 50px;
   background-color: grey;
 }
 
