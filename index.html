@@ -12,26 +12,37 @@
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="stylesheet" href="./styles/layout.css">
   <link rel="stylesheet" href="./styles/modules.css">
+
+  <script id="project-overlay" type="text/x-handlebars-template">
+    <article class="tab-content projects">
+      <div class="project-container">
+        <div class="project-title-overlay">
+          <h2>{{ projectName }}</h2>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </article>
+  </script>
+</script>
 </head>
 
 <body>
   <header>
     <section class="header-top">
-      <span class="name-logo">Shaun Wahle - Portfolio</span>
+      <span class="name-logo">Jonah Oh</span>
       <span class="icon-menu"></span>
     </section>
 
     <nav class="main-nav">
       <ul>
         <li class="tab" data-content="home"><a href="">Home</a></li>
-        <a href="#">
-          <li class="tab" data-content="projects">Projects</li>
-        </a>
-        <li><a href="https://github.com/spwahle">Github</a></li>
-        <a href="#" <li class="tab" data-content="about=me">About</li></a>
+        <li class="tab" data-content="projects"><a href="#">Projects</a></li>
+        <li><a href="https://github.com/ohjonah">Github</a></li>
+        <li class="tab" data-content="about-me"><a href="#">About</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
     <section class="hero-container">
       <img src="https://placehold.co/960x540">
@@ -40,27 +51,18 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </section>
     </section>
-    <<script id="project-overlay" type= "text/x-handlebars-template">
-    <article class="tab-content projects">
-        <div class="project-container">
-          <div class="project-title-overlay">
-            <h2>{{Project Name}}</h2>
-            <button>Learn More</button>
-            </<div>
-          </div>
-        </div>
-        </div>
-      </article>
-    </section>
+
+    <h2 class="tab-content projects">Projects</h2>
+    <section id="projects"></section>
+
     <div class="clearfix"></div>
 
-    <article class="about-me">
+    <article class="about-me tab-content">
       <h3>About</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </article>
-
   </main>
+
 
   <footer>
     <p>&#169;Shaun Wahle</p>
@@ -69,6 +71,7 @@
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
   <script src="./js/data.js"></script>
   <script src="./js/project.js"></script>
   <script src="./js/projectView.js"></script>

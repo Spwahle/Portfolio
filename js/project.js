@@ -15,16 +15,9 @@ function Project(rawDataObj) {
 //prototype function that creates a deeo copy stored as $newProject, removes the class of template
 //finds the decendants of project-title-overlay and adds projectName attribute to it. Finally returning the var that we built
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-
-  $newProject.removeClass('template');
-  $newProject.find('.project-title-overlay h2').html(this.projectName);
-  $newProject.find('.project-description').html(this.description);
-  $newProject.find('.link a').attr('href', this.siteUrl);
-  $newProject.find('.repo a').attr('href', this.repoUrl);
-
-
-  return $newProject;
+  var template = $('#project-overlay').html();
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 };
 
 //this will loop through my raw data and forEach it will push the Project objects
