@@ -1,88 +1,122 @@
-.site-header {
-  background: #777;
+/*************************
+          HEADER
+**************************/
+
+.header-top {
+  max-width: 100%;
+  height: 3em;
+  position: relative;
 }
 
-.heading-group-h1 {
-  float: left;
-  padding: 0 0 .2em 1em;
+.name-logo {
+  position: absolute;
+  top: .25em;
+  left: .25em;
+  font-size: 2em;
 }
 
 .icon-menu {
-  float: right;
-  font-size: 8em;
-  color: black;
+  position: absolute;
+  top: .2em;
+  right: .2em;
+  font-size: 2em;
 }
 
-.main-nav {
-  padding: 0.1em;
-}
-
-.main-nav ul {
-  display: none;
-  padding: 0;
-  list-style: none;
-  clear: both;
-
-}
-
-.main-nav:hover ul {
-  display: block;
-}
-
-.main-nav li {
-  margin-right: 70px;
-  margin-top: 50px;
-  background: #777;
-  font-size: 1.5em;
-  padding: .5em .2em;
-  border-bottom: 4px solid #ccc;
-}
-
-.main-banner {
-  width: 100%
-}
-
-#filters {
-  padding: 0;
-  list-style: none;
-}
-
-.template {
+nav {
   display: none;
 }
 
-.byline {
-  color: #777;
+
+
+.hero-container {
+  position: relative;
 }
 
-.byline a {
-  font-weight: bold;
+.hero-textoverlay {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  right: 3em;
+  border-radius: 5px;
+  border: 1px black solid;
+  background: rgba(200, 54, 54, 0.5);
+}
+
+.hero-textoverlay p {
+  padding: .3em .3em;
+  text-align: center;
+}
+
+/*************************
+          Projects
+**************************/
+
+main > h2, h3 {
+  margin: 1em 0.75em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+article {
+  max-width: 100%;
+}
+
+article .project-container {
+  width: 25em;
+  height: 25em;
+  float: left;
+  margin: 0 .5em;
+  position: relative;
+  margin-left: 50px;
+  background-color: grey;
+}
+
+article .project-title-overlay {
+  width: 100%;
+  padding: 2em 0 2em 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: rgba(200, 54, 54, 0.5);
+  font-size: 8;
+}
+
+.project-title-overlay btn {
+  border-radius: 3px;
   text-decoration: none;
 }
 
-div .class {
-  margin-bottom: 50px;
+article.about-me {
+  margin: 2em auto;
+  padding: 0 2em;
+  text-align: justify;
 }
 
-.menu ul {
-  background: #777;
+/*************************
+          Footer
+**************************/
+
+footer {
+  text-align: center;
 }
 
 
 @media only screen and (min-width: 640px) {
-  .main-nav ul {
-    float: right;
-    padding-right: 10px;
+
+  header span.icon-menu {
+    display: none;
+  }
+
+  nav {
     display: block;
   }
 
-  .main-nav li {
-    display: inline-block;
-    border: none;
-    font-size: 1.25em;
+  footer p {
+    float: left;
   }
 
-  .main-nav span.icon-menu {
-    display: none;
+  footer a {
+    float: right;
   }
+
 }
