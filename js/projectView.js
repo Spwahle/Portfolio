@@ -10,7 +10,6 @@ projectView.handleMainNav = function() {
     $('.hero-container').hide();
     $('.tab-content').hide();
     $('.' + $(this).data('content')).show();
-    $('.template').hide();
   });
 };
 
