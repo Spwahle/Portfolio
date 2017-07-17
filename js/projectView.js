@@ -5,14 +5,14 @@ var projectView = {};
 
 //handleMainNav is a function created to handle hiding the content on click events
 
-// projectView.handleMainNav = function() {
-//   $('.main-nav').on('click', '.tab', function() {
-//     $('.hero-container').hide();
-//     $('.tab-content').hide();
-//     $('.' + $(this).data('content')).show();
-//     $('.template').hide();
-//   });
-// };
+projectView.handleMainNav = function() {
+  $('.main-nav').on('click', '.tab', function() {
+    $('.hero-container').hide();
+    $('.tab-content').hide();
+    $('.' + $(this).data('content')).show();
+    $('.template').hide();
+  });
+};
 
 projectView.setTeasers = function() {
   $('.article-body *:nth-of-type(n+2)').hide();
