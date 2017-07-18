@@ -1,28 +1,9 @@
 'use strict';
 
-const articleView = {};
-
-articleView.populateFilters = function() {
-  $('article').each(function() {
-    if (!$(this).hasClass('template')) {
-      let val = $(this).find('address a').text();
-      let optionTag = `<option value="${val}">${val}</option>`;
-
-      if ($(`#author-filter option[value="${val}"]`).length === 0) {
-        $('#author-filter').append(optionTag);
-      }
-
-      val = $(this).attr('data-category');
-      optionTag = `<option value="${val}">${val}</option>`;
-      if ($(`#category-filter option[value="${val}"]`).length === 0) {
-        $('#category-filter').append(optionTag);
-      }
-    }
-  });
-};
+const ProjectView = {};
 
 
-articleView.handleMainNav = function() {
+ProjectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
@@ -31,9 +12,9 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide();
-  $('article').on('click', 'a.read-on', function(e) {
+ProjectView.setTeasers = function() {
+  $('.Project-body *:nth-of-type(n+2)').hide();
+  $('Project').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     if ($(this).text() === 'Read on →') {
       $(this).parent().find('*').fadeIn();
@@ -43,40 +24,21 @@ articleView.setTeasers = function() {
         scrollTop: ($(this).parent().offset().top)
       },200);
       $(this).html('Read on &rarr;');
-      $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
+      $(this).parent().find('.Project-body *:nth-of-type(n+2)').hide();
     }
   });
 };
 
-articleView.create = function() {
-  let article;
-  $('#articles').empty();
+ProjectView.create = function() {
+  let Project;
+  $('#Projects').empty();
 
-  article = new Article({
-    title: $('#article-title').val(),
-    author: $('#article-author').val(),
-    authorUrl: $('#article-author-url').val(),
-    category: $('#article-category').val(),
-    body: $('#article-body').val(),
-    publishedOn: $('#article-published:checked').length ? new Date() : null
+
+ProjectView.initIndexPage = function() {
+  Project.all.forEach(function(Project) {
+    $('#Projects').append(Project.toHtml())
   });
 
-  $('#articles').append(article.toHtml());
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-
-  $('#export-field').show();
-  $('#article-json').val(`${JSON.stringify(article)},`);
-};
-
-
-articleView.initIndexPage = function() {
-  Article.all.forEach(function(article) {
-    $('#articles').append(article.toHtml())
-  });
-
-  articleView.populateFilters();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+  ProjectView.handleMainNav();
+  ProjectView.setTeasers();
 };
