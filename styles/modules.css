@@ -34,12 +34,13 @@ nav {
 
 .hero-textoverlay {
   position: absolute;
-  top: 2em;
+  top: 4em;
   left: 2em;
   right: 3em;
   border-radius: 5px;
   border: 1px black solid;
   background: rgba(200, 54, 54, 0.5);
+  opacity: 25%;
 }
 
 .hero-textoverlay p {
