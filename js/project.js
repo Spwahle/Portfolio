@@ -13,7 +13,7 @@ Project.all = [];
 Project.prototype.toHtml = function() {
   let template = Handlebars.compile($('#project-overlay').text());
 
-  var template = $('#my-template').html();
+  var template = $('.project-container').html();
   var templateRender = Handlebars.compile(template);
   return templateRender(this);
 };
