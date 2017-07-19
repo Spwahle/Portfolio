@@ -1,0 +1,35 @@
+header {
+  margin-bottom: 1em;
+}
+
+main {
+  max-width: 100%;
+}
+
+.template {
+  display: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav ul {
+  display: inline;
+  float: right;
+}
+
+.toggle {
+  display: block;
+}
+/*************************
+          Carousel
+**************************/
+
+.hero-container {
+  max-width: 100%;
+}
+
+.hero-container img {
+  width: 100%;
+}

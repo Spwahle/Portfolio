@@ -1,0 +1,16 @@
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background-color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.clearfix {
+  clear:both;
+}
