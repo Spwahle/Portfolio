@@ -48,3 +48,11 @@ Project.fetchAll = function() {
     });
   }
 }
+
+Project.prototype.insertRecord = function(callback) {
+  $.post('/project', {author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title})
+  .then(function(data) {
+    console.log(data);
+    if (callback) callback();
+  })
+};
