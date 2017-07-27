@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Shaun's Portfolio</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/skeleton.css">
+  <link rel="stylesheet" href="./styles/modules.css">
+  <link rel="stylesheet" href="./Vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script id="project-overlay" type="text/x-handlebars-template">
+    <article class="tab-content projects">
+      <div class="project-container">
+        <div class="project-title-overlay">
+          <h2>{{ projectName }}</h2>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </article>
+  </script>
+</script>
+  </head>
+  <body>
+  <header class="site-header clearfix">
+    <section class="header-top">
+      <span class="name-logo">Shaun Wahle</span>
+        <span class="icon-menu"></span>
+    </section>
+      <nav class="main-nav">
+        <ul>
+          <li class="tab" data-content="home"><a href="">Home</a></li>
+          <li class="tab" data-content="projects"><a href="#">Projects</a></li>
+          <li><a href="https://github.com/Spwahle">Github</a></li>
+          <li class="tab" data-content="about-me"><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section class="hero-container">
+    <img src="/images/pexels-photo.jpg">
+      <section class="hero-textoverlay">
+          <p>TITLE</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+  </section>
+  <Project class="about-me tab-content">
+    <h3>About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </Project>
+    <h2 class="tab-content projects">Projects</h2>
+    <section id="projects"></section>
+    <div class="clearfix"></div>
+  </main>
+
+
+  <footer>
+    <p>&#169;Shaun Wahle</p>
+    <a href="https://www.linkedin.com/in/spwahle" <i class="fa fa-linkedin" aria-hidden="true"></i>
+    <a href="https://github.com/spwahle"<i class="fa fa-github" aria-hidden="true"></i>
+
+  </footer>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+  <script src="./js/project.js"></script>
+  <script src="./js/projectView.js"></script>
+  <script>
+  app.Project.fetchAll();
+  </script>
+  <script src="./vendor/scripts/page.js"></script>
+  <script src="./js/projectController.js"></script>
+  <script src="./js/routes.js"></script>
+</body>
+
+</html>
