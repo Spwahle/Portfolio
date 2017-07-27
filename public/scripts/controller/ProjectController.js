@@ -1,7 +1,7 @@
 'use strict';
 
 var app = app || {};
-
+// function designed to hide my main sections and show my project section
 (function(module) {
   const projectController = {};
 
