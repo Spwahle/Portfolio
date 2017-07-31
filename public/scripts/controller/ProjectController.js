@@ -8,7 +8,6 @@ var app = app || {};
   projectController.index = () => {
     $('.hero-container').hide();
     $('#article').hide();
-    $('.reduce').hide();
     $('.projects').show();
     $('#projects').show();
   };

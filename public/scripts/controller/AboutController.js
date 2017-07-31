@@ -1,5 +1,7 @@
 'use strict';
 
+'use strict';
+
 var app = app || {};
 
 (function(module) {
@@ -8,8 +10,6 @@ var app = app || {};
   aboutController.index = () => {
     $('.hero-container').hide();
     $('.projects').hide();
-    $('#projects').hide();
-    $('.reduce').hide();
     $('.about-me').show();
   };
 

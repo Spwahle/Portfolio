@@ -26,4 +26,4 @@ app.get('/new', function(req, res) {
   res.sendFile('./new.html', {root: './public'});
 });
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}!`))
+app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
