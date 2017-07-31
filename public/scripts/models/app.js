@@ -3,9 +3,6 @@
 var app = app || {};
 
 (function(module) {
-
-
-
   function Project(rawDataObj) {
     this.projectName = rawDataObj.projectName;
     this.description = rawDataObj.description;
@@ -26,8 +23,6 @@ var app = app || {};
     $('#projects').append(rawData.map(render));
   }
 
-
-
   Project.fetchAll = function() {
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
@@ -39,5 +34,5 @@ var app = app || {};
     }
   }
 
-module.Project = Project;
+  module.Project = Project;
 } (app));
