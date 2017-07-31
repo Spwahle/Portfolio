@@ -1,7 +1,9 @@
 'use strict';
 
+'use strict';
+
 var app = app || {};
-// function designed to hide my main sections and show my about section
+
 (function(module) {
   const aboutController = {};
 

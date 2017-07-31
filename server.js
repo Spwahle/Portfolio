@@ -2,23 +2,27 @@
 
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser').urlencoded({extended: true});
-const PORT = process.env.PORT || 3000;
-const conString = 'postgres://localhost:5432/kilovolt';
+const PORT = process.env.PORT || 8080;
+const requestProxy = require('express-request-proxy');
 
- app.use(express.static('./public'));
+app.use(express.static('./public'));
 
- app.get('/*', function(req, res) {
-   res.sendFile('./index.html', { root: './public'});
- });
+function proxyGitHub(request, response) {
+  console.log('Routing GitHub request for', request.params[0]);
+  (requestProxy({
+    url: `https://api.github.com/${request.params[0]}`,
+    headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}
+  }))(request, response);
+}
 
- app.get('/new', function(req, rest) {
-   res.SendFile('./new.html', {root: './public'});
- });
+app.get('/github/*', proxyGitHub);
 
- app.post('/project', bodyParser, function(request, response) {
-  })
+app.get('/*', function(req, res) {
+  res.sendFile('./index.html', { root: './public'});
+});
 
-  app.listen(PORT, function() {
-  console.log(`Listening on port: "${PORT}"`);
-  });
+app.get('/new', function(req, res) {
+  res.sendFile('./new.html', {root: './public'});
+});
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
