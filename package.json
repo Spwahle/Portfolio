@@ -1,16 +1,24 @@
 {
-  "name": "portfolio",
+  "name": "301-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spwahle/Portfolio.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spwahle/Portfolio/issues"
+  },
+  "homepage": "https://github.com/spwahle/Portfolio#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "express-request-proxy": "^2.0.0"
   }
 }
